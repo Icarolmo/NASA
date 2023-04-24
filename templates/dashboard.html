@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PictuteDay - Dashboard</title>
+    <link rel="stylesheet" href="static/style_dashboard.css">
+    <link rel="stylesheet" href="static/pyscript.css" />
+</head>
+<body>
+    <div class="dashboard-box">
+        <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/The_Fall_of_Icarus_%28SM_1689%29.png/1200px-The_Fall_of_Icarus_%28SM_1689%29.png" alt="ICARUS Logo" width="300" height="300">
+        <h1>APOD</h1>
+        <p>Clique em buscar para consumir a APOD</p>
+        <input type="button" id="buscar" value="Buscar" onclick="urlImage()">
+        <a id="url" href=""><input type="button" id="link-url" value="URL Imagem"></a>
+    </div>   
+    <script>
+        function urlImage(){
+            fetch('https://api.nasa.gov/planetary/apod?api_key=jyFrhuuHrKIUH1gnsZufvrdpSpo5N6JXfhiHGfcr')
+        .then(response => response.json())
+        .then(data => {
+            const imgUrl = data.url; // pega a URL da imagem do objeto JSON
+            document.getElementById("img").src = imgUrl; // define a URL da imagem como a fonte da tag img
+            document.getElementById("url").href = imgUrl; 
+        })
+        .catch(error => console.error(error));
+        } 
+    </script> 
+</body>
+</html>

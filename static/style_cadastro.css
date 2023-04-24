@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://apod.nasa.gov/apod/image/1811/leonidSV_1300.jpg');
+    background-size: cover;
+}
+
+
+.register-box img {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.register-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    width: 330px;
+    max-width: 90%;
+}
+
+.register-form h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.register-form form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.register-form button[type="submit"] {
+    background-color: #1c8adb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    height: 40px;
+}
+
+.register-form button[type="submit"]:hover {
+    background-color: #39a9db;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PictuteDay - Imagem</title>
+    <link rel="stylesheet" href="static/style_img.css">
+    <link rel="stylesheet" href="static/pyscript.css" />
+</head>
+<body>
+    <div class="img-box">
+        <img src="" id="imagem" alt="Astronomy Img" width="600" height="600">
+    </div>
+    <script>
+        function getImg(){
+            fetch('https://api.nasa.gov/planetary/apod?api_key=jyFrhuuHrKIUH1gnsZufvrdpSpo5N6JXfhiHGfcr')
+            .then(response => response.json())
+            .then(data => {
+                const imgUrl = data.url; // pega a URL da imagem do objeto JSON
+                img[id="imagem"].src = imgUrl; // define a URL da imagem como a fonte da tag img
+            })
+            .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>

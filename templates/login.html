@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PictureDay - Login</title>
+    <link rel="stylesheet" href="static/style_login.css">
+    <link rel="stylesheet" href="static/pyscript.css" />
+</head>
+<body>
+    <div class="login-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/The_Fall_of_Icarus_%28SM_1689%29.png/1200px-The_Fall_of_Icarus_%28SM_1689%29.png" alt="ICARUS Logo" width="220" height="220">
+        <h1>Login</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" id="login" value="Login" onclick="validaForm()">
+        </form>
+        <a href="/cadastro"><input type="submit" value="Solicitar acesso"></a>
+    </div>
+</body>
+</html>
+
+
+<script>function validaForm(){
+    var autUsername = document.getElementById("username");
+    var autPassword = document.getElementById("password");
+if(autUsername.value == 'astronomyPic' && autPassword.value == '#apod'){
+    window.open("/dashboard")
+}else{
+    alert("Usuário ou Senha inválida.")
+ return false;
+}
+}
+</script>
+
